@@ -2,7 +2,6 @@ import h5py
 import numpy as np
 import matplotlib.pyplot as plt
 from wavelet_transforms import transform_wavelet_time
-from scipy.signal import butter, filtfilt
 with h5py.File(r"D:\HuaweiMoveData\Users\HUAWEI\Desktop\TAI\LISA Data Challenge\LDC2_spritz_mbhb1_training_v1.h5", 'r') as f:
     data = f["obs/tdi"][()]
     time =np.array([x[0] for y in data for x in y])#读取时间戳
